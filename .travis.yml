@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+    - "4.3.0"
+
+branches:
+  only:
+    - master
+    - dev
+
+notifications:
+  email:
+    - sherwin.yu93@gmail.com
+
+install:
+  - sudo apt-get install -y wget
+  - wget -qO cfcli.deb https://cli.run.pivotal.io/stable?release=debian64&source=github &
+  - wait %1
+  - sudo dpkg -i cfcli.deb
+  - npm install
+
+script:
+  - npm run build
+  - bash ci_deploy.sh
