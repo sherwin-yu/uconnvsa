@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: uconnvsa-dev
+  host: uconnvsa-dev
+  disk_quota: 1024M
+  command: node server.js
+  env:
+    NODE_ENV: development
