@@ -32,6 +32,10 @@ if(process.env.NODE_ENV) {
 
 app.use(express.static(__dirname + '/' + content_path));
 
+app.use(function(req, res){
+  res.sendFile('index.html', {root : __dirname + '/' + content_path})
+});
+
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
