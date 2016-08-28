@@ -1,9 +1,40 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center">MEDIA</h1>
-      <p>Instagram Feed</p>
-      <p>Youtube Videos</p>
+      <div class="page-header">
+        <h1 class="text-center">MEDIA</h1>
+      </div>
+      <h2 class="text-center">Gallery</h2>
+      <p class="text-center"><a href="https://www.instagram.com/uconnvsa">Follow us on Instagram</a></p>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-inner">
+            <div class="item" ng-class="{active:!$index}" ng-repeat="pics in mediaCtrl.pics">
+              <div class="col-md-5 col-md-offset-1">
+                <a href="{{pics.link}}" target="_blank">
+                  <img ng-src="{{pics.images.standard_resolution.url}}" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-md-5">
+                <p class="date">{{pics.created_time * 1000 | date:'mediumDate'}}</p>
+                <p class="description">{{pics.caption.text}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <h1 class="text-center">Videos</h1>
     </div>
   </div>
 </div>

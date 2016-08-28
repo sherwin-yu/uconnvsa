@@ -2,7 +2,8 @@
 
   // include our submodules
   angular.module('uconnvsa',[
-      'ngRoute' // simple page routing and templating
+      'ngRoute', // simple page routing and templating
+      'instafeed' // instagram api
   ])
 
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
@@ -86,8 +87,18 @@
   }])
 
   //controller for media page
-  .controller('MediaController', [ function() {
+  .controller('MediaController', ['instagramAPI', function(instagramAPI) {
     var that = this;
+    that.pics = {};
+
+    /*
+    * Retrives all the pictures associated with the user from Instagram
+    */
+    instagramAPI.fetchPhotos(function(data) {
+      console.log('instagram feed', data);
+      that.pics = data;
+    });
+
   }])
 
   //controller for merch page
