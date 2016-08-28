@@ -4,7 +4,9 @@
 	"description": "University of Connecticut Vietnamese Student Assocation Website",
 	"scripts": {
 		"start": "node server.js",
-		"build": "gulp"
+		"build": "gulp",
+		"build-css":"node-sass --include-path scss public/sass/style.scss public/css/style.css",
+		"watch-css":"node-sass -w public/sass -o public/css"
 	},
 	"dependencies": {
 		"express": "4.12.x",
