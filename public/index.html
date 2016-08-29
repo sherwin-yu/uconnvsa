@@ -70,8 +70,16 @@
     <div ng-view>
     </div>
 
-    <footer class="footer navbar navbar-default navbar-fixed-bottom">
+    <footer class="footer navbar navbar-default">
       <div class="container">
+        <p class="text-center">Be the first to know about announcements, events, and fundraisers by joining our mailing list</p>
+        <form name="mailingListForm">
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" ng-model="email" required>
+          </div>
+          <button type="submit" id="sendBtn"><span style="font-size:14px;font-weight:500;">Submit</span></button>
+        </form>
+
         <div class="text-right">Follow Us
           <a href="https://www.facebook.com/uconnvsa">Facebook</a>
           <a href="https://www.instagram.com/uconnvsa">Instagram</a>
