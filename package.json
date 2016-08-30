@@ -11,6 +11,7 @@
 	"dependencies": {
 		"express": "4.12.x",
 		"cfenv": "1.0.x",
+		"bower":"*",
 		"del": "^2.2.0",
 		"gulp": "^3.9.1",
 		"gulp-sass":"*",

@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "dependencies":{
-    "prism":"*"
+    "prism":"*",
+    "jquery":"2.2.0",
+    "bootstrap":"*",
+    "angular":"*",
+    "angular-route":"*"
   }
 }
