@@ -1,9 +1,8 @@
 {
-  "name": "ui-doc",
+  "name": "UConn VSA",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies":{
-    "prism":"*",
     "jquery":"2.2.0",
     "bootstrap":"*",
     "angular":"*",
