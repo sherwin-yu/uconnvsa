@@ -26,11 +26,6 @@
         controller: 'EboardController',
         controllerAs: 'eboardCtrl'
       })
-      .when('/membership',{
-        templateUrl: 'templates/eboard.html',
-        controller: 'EboardController',
-        controllerAs: 'eboardCtrl'
-      })
       .when('/events',{
         templateUrl: 'templates/events.html',
         controller: 'EventsController',
@@ -40,11 +35,6 @@
         templateUrl: 'templates/media.html',
         controller: 'MediaController',
         controllerAs: 'mediaCtrl'
-      })
-      .when('/merchandise',{
-        templateUrl: 'templates/merchandise.html',
-        controller: 'MerchandiseController',
-        controllerAs: 'merchCtrl'
       })
       .when('/network',{
         templateUrl: 'templates/network.html',
@@ -76,12 +66,7 @@
   .controller('EboardController', [ function() {
     var that = this;
   }])
-
-  //controller for membership page
-  .controller('MembershipController', [ function() {
-    var that = this;
-  }])
-
+  
   //controller for events page
   .controller('EventsController', [ function() {
     var that = this;
@@ -102,10 +87,6 @@
 
   }])
 
-  //controller for merch page
-  .controller('MerchandiseController', [ function() {
-    var that = this;
-  }])
 
   //controller for network page
   .controller('NetworkController', [ function() {
