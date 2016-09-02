@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col m12">
+    <div class="col s12">
       <div class="page-header">
         <h1 class="center-align">MEDIA</h1>
       </div>
@@ -11,12 +11,12 @@
         <div class="carousel-inner" role="listbox">
           <div class="carousel-inner">
             <div class="item" ng-class="{active:!$index}" ng-repeat="pics in mediaCtrl.pics">
-              <div class="col m5 offset-m1">
+              <div class="col s5 offset-m1">
                 <a href="{{pics.link}}" target="_blank">
                   <img ng-src="{{pics.images.standard_resolution.url}}" class="img-responsive">
                 </a>
               </div>
-              <div class="col m5">
+              <div class="col s5">
                 <p class="date">{{pics.created_time * 1000 | date:'mediumDate'}}</p>
                 <p class="description">{{pics.caption.text}}</p>
               </div>
