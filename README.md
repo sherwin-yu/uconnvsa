@@ -11,8 +11,9 @@ This application is the website for the University of Connecticut Vietnamese Stu
 3. cd into the app directory
 4. Run `npm install` to install the app's dependencies
 5. Run `bower install` to install the front-end's dependencies
-6. Run `npm start` to start the app
-7. Access the running app in a browser at http://localhost:6004
+6. Run `npm run build-css` or `npm run watch-css` to compile SASS into CSS
+7. Run `npm start` to start the app
+8. Access the running app in a browser at http://localhost:6004
 
 [Install Node.js]: https://nodejs.org/en/download/
 [Github]: https://github.com/sherwin-yu/uconnvsa
