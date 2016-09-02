@@ -3,6 +3,7 @@
   // include our submodules
   angular.module('uconnvsa',[
       'ngRoute', // simple page routing and templating
+      'ui.materialize', //angular-materialize plugin
       'instafeed' // instagram api
   ])
 

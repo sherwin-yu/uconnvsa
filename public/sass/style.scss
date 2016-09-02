@@ -1,54 +1,21 @@
 $lightred:lighten(red, 20%);
 
 body,html {
-	height:100%;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	padding-top:25px;
-	margin-bottom:150px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
 }
 
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
 
- .navbar-nav>li>a{
-	 border-bottom:2px solid transparent;
-	 	&:hover{
-			border-bottom:2px solid black;
-		}
- }
-
-button {
-	background-color:white;
-	color:black;
-	border:2px solid black;
-	padding:8px;
-	&:hover, &:focus {
-		color:white;
-		background:black;
-	}
+main {
+	flex: 1 0 auto;
 }
 
 .ng-invalid.ng-dirty{
   border-color:$lightred;
-}
-
-.footer {
-	padding:15px;
-	form{
-		width:400px;
-		margin:0 auto;
-	}
-	.form-group {
-		width:300px;
-		display:inline-block;
-	}
-	input {
-		height:40px;
-		box-shadow:none;
-		border:2px solid transparent;
-		border-radius:0;
-	}
-	button {
-		display:inline-block;
-	}
 }
 
 #slides_control > div{
@@ -95,17 +62,4 @@ img{
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-}
-
-//Contact Page
-.contact {
-	input{
-		border:2px solid lightgray;
-		height:40px;
-		border-radius: 0px;
-	}
-	textarea{
-		border:2px solid lightgray;
-		border-radius:0px;
-	}
 }
