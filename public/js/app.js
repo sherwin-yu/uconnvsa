@@ -55,6 +55,9 @@
   //controller for home page
   .controller('HomeController', [ function() {
 	  var that = this;
+    $(document).ready(function(){
+          $('.parallax').parallax();
+    });
   }])
 
   //controller for about page
@@ -66,7 +69,7 @@
   .controller('EboardController', [ function() {
     var that = this;
   }])
-  
+
   //controller for events page
   .controller('EventsController', [ function() {
     var that = this;

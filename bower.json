@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "dependencies":{
-    "jquery":"2.2.0",
+    "jquery":"2.2.4",
     "materialize":"*",
     "angular-materialize":"*",
     "angular":"*",
