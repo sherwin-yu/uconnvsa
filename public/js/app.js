@@ -53,10 +53,16 @@
   }])
 
   //controller for home page
-  .controller('HomeController', [ function() {
+  .controller('HomeController', [ '$location', function($location) {
 	  var that = this;
+
+    //learn more button
+    that.learnMore = function() {
+      return $location.url('/about');
+    }
+
     $(document).ready(function(){
-          $('.parallax').parallax();
+      $('.parallax').parallax();
     });
   }])
 
@@ -68,6 +74,11 @@
   //controller for eboard page
   .controller('EboardController', [ function() {
     var that = this;
+    that.eboard = members;
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
   }])
 
   //controller for events page
@@ -101,7 +112,29 @@
     var that = this;
   }])
 
-
+  //eboard members TODO: Move this to a database
+  var members = [
+    {
+      "name":"Sherwin Yu",
+      "position":"Co-President",
+      "hometown":"Bridgeport, CT",
+      "year": "Freshman",
+      "major": "Computer Science",
+      "favoriteFood":"Steak",
+      "vsaMeaning":"Home away from home",
+      "image":"sherwin.jpg"
+    },
+    {
+      "name":"Sherwin Me",
+      "position":"Food Director",
+      "hometown":"Storrs, CT",
+      "year": "Senior",
+      "major": "Culinary Arts",
+      "favoriteFood":"Everything",
+      "vsaMeaning":"Where I eat",
+      "image":"eating.jpg"
+    }
+  ];
 
 
 
