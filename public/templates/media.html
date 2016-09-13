@@ -6,44 +6,11 @@
 
       <h4 class="center-align">Gallery</h4>
 
-        <div class="card-panel">
-          <div carousel ng-repeat="pics in mediaCtrl.pics |limitTo:1">
-            <div ng-repeat="pics in mediaCtrl.pics">
-              <a class="carousel-item" href=""><img materialboxed class="materialboxed responsive-img" ng-src="{{pics.images.standard_resolution.url}}"></a>
-            </div>
-          </div>
+      <div ng-repeat="pics in mediaCtrl.pics">
+        <div class="col s3">
+          <a  href=""><img materialboxed class="materialboxed responsive-img" ng-src="{{pics.images.standard_resolution.url}}"></a>
         </div>
-      <!--
-      <p class="center-align"><a href="https://www.instagram.com/uconnvsa">Follow us on Instagram</a></p>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-       Wrapper for slides
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-inner">
-            <div class="item" ng-class="{active:!$index}" ng-repeat="pics in mediaCtrl.pics">
-              <div class="col s5 offset-s1">
-                <a href="{{pics.link}}" target="_blank">
-                  <img ng-src="{{pics.images.standard_resolution.url}}" class="img-responsive">
-                </a>
-              </div>
-              <div class="col s5">
-                <p class="date">{{pics.created_time * 1000 | date:'mediumDate'}}</p>
-                <p class="description">{{pics.caption.text}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      Left and right controls
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-    -->
       <h4 class="center-align">Videos</h4>
     </div>
   </div>
