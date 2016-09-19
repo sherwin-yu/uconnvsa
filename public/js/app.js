@@ -69,6 +69,11 @@
   //controller for about page
   .controller('AboutController', [ function() {
     var that = this;
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+    
   }])
 
   //controller for eboard page
@@ -84,6 +89,11 @@
   //controller for events page
   .controller('EventsController', [ function() {
     var that = this;
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
   }])
 
   //controller for media page
@@ -99,17 +109,30 @@
       that.pics = data;
     });
 
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
   }])
 
 
   //controller for network page
   .controller('NetworkController', [ function() {
     var that = this;
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
   }])
 
   //controller for contact page
   .controller('ContactController', [ function() {
     var that = this;
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
   }])
 
   //eboard members TODO: Move this to a database

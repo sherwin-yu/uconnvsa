@@ -1,4 +1,12 @@
 $lightred:lighten(red, 20%);
+$white: #FAFAFA;
+$light-blue: #C7EEFF;
+$blue: #0077C0;
+$black: #1D242B;
+
+.white-bg {
+	background-color:$white;
+}
 
 body,html {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
