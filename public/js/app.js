@@ -4,7 +4,8 @@
   angular.module('uconnvsa',[
       'ngRoute', // simple page routing and templating
       'ui.materialize', //angular-materialize plugin
-      'instafeed' // instagram api
+      'instafeed', // instagram api
+      'mail' //mail api using sendgrid
   ])
 
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
@@ -73,7 +74,7 @@
     $(document).ready(function(){
       $('.parallax').parallax();
     });
-    
+
   }])
 
   //controller for eboard page
@@ -127,8 +128,21 @@
   }])
 
   //controller for contact page
-  .controller('ContactController', [ function() {
+  .controller('ContactController', ['mailService', '$scope', function(mailService, $scope) {
     var that = this;
+    $scope.contact = {};
+
+    /*
+    * POST mail call to send email
+    */
+    that.sendMail = function(email){
+      mailService.sendMail(email, function(data){
+        console.log('mail', data);
+        //reset form
+        $scope.contact ={};
+        $scope.contactForm.$setPristine();
+      });
+    };
 
     $(document).ready(function(){
       $('.parallax').parallax();

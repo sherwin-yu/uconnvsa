@@ -9,7 +9,7 @@
     <div class="col m10 offset-m1 s12 contact">
       <div class="card-panel" style="bottom-padding:50px;">
         <p class="center-align">You can also contact us at <a href="mailto:uconnvsa@gmail.com">uconnvsa@gmail.com</a></p>
-        <form name="contactForm" ng-submit="" novalidate>
+        <form name="contactForm" style="width:100%;" ng-submit="contactForm.$valid && contactCtrl.sendMail(contact)" novalidate>
           <div input-field>
               <i class="material-icons prefix">account_circle</i>
               <input type="text" id="name" name="name" ng-model="contact.name" required>
@@ -17,7 +17,7 @@
           </div>
           <div input-field>
             <i class="material-icons prefix">email</i>
-              <input type="email" id="email" name="email" ng-model="contact.email" required>
+              <input type="email" id="email" name="email" ng-model="contact.from" required>
               <label>Email *</label>
           </div>
           <div input-field>
