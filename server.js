@@ -13,7 +13,7 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
-//needed for req.body
+var restify = require('restify');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -58,7 +58,29 @@ app.post('/sendEmail', function(req, res){
     });
 });
 
+//mailchimp for mail subscribers
+var mailchimp_api_key = vcap['user-provided'][0].credentials.mailchimp_api_key;
+var mailchimp_list_id = vcap['user-provided'][0].credentials.mailchimp_list_id;
 
+var client = restify.createJsonClient({
+    url: "https://us14.api.mailchimp.com"
+});
+
+app.post('/subscribe', function(req, res){
+  console.log('subscribe reqbody', req.body);
+  var path = "/3.0/lists/" + mailchimp_list_id + "/members/";
+  client.basicAuth("mailchimp", mailchimp_api_key);
+  client.post(path, req.body, function(error, request, response, obj){
+    if (error) {
+            console.log("An error occurred in subscribing  >>>>>>");
+            console.log(error);
+            res.send(obj);
+        } else {
+            console.log('subscribe successful >>>>>>>');
+            console.log(obj);
+        }
+  })
+});
 
 //add middleware to serve static files from /public or /dist
 var content_path;

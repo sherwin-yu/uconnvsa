@@ -1,0 +1,35 @@
+<footer class="page-footer grey lighten-1">
+  <div class="container">
+    <div class="row">
+      <div class="col l8 s12">
+        <h5 class="white-text center-align">Subscribe</h5>
+        <p class="grey-text text-lighten-4 center-align">Be the first to know about announcements, meetings, and events by subscribing to our mailing list</p>
+          <form name="mailingListForm" ng-submit="footerCtrl.subscribe(subscriber.email)" novalidate>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" style="width:70%;" ng-model="subscriber.email" required>
+                <label for="email">Enter Your Email</label>
+                <button class="btn waves-effect waves-light blue accent-3" type="submit" name="action" style="inline-block;">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+      </div>
+      <div class="col l4 s12">
+        <h5 class="white-text center-align">Follow Us</h5>
+          <ul class="center-align">
+            <li><a class="white-text text-lighten-3" href="https://www.facebook.com/uconnvsa">Facebook</a></li>
+            <li><a class="white-text text-lighten-3" href="https://www.instagram.com/uconnvsa">Instagram</a></li>
+            <li><a class="white-text text-lighten-3" href="https://www.youtube.com/channel/UC81igfyDtim2MdR9X9HfgvA">Youtube</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2016 UConn VSA
+      <a class="grey-text text-lighten-4 right" href="/contact">Contact Us</a>
+    </div>
+  </div>
+</footer>

@@ -4,8 +4,10 @@
   angular.module('uconnvsa',[
       'ngRoute', // simple page routing and templating
       'ui.materialize', //angular-materialize plugin
+      'vsa-footer', //footer
       'instafeed', // instagram api
-      'mail' //mail api using sendgrid
+      'mail', //mail api using sendgrid
+      'subscribe' //mailchimp api to subscribe emails
   ])
 
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
@@ -51,6 +53,7 @@
 
     // use the HTML5 History API
     $locationProvider.html5Mode(true);
+
   }])
 
   //controller for home page
