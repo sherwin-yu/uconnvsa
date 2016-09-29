@@ -77,7 +77,7 @@ app.post('/subscribe', function(req, res){
             res.send(obj);
         } else {
             console.log('subscribe successful >>>>>>>');
-            console.log(obj);
+            res.send(obj);
         }
   })
 });

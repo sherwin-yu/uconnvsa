@@ -144,6 +144,12 @@
         //reset form
         $scope.contact ={};
         $scope.contactForm.$setPristine();
+        swal({
+          title: 'Success!',
+          text: 'Message sent',
+          type: 'success',
+          confirmButtonText: 'OK'
+        })
       });
     };
 

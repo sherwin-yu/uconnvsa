@@ -17,6 +17,24 @@
 							};
 							subscribeService.subscribe(subscriberBody, function(data){
 								console.log('subscribe', data);
+								$scope.subscriber ={};
+								$scope.mailingListForm.$setPristine();
+								if(data.title === 'Member Exists'){
+									swal({
+										title: 'Error!',
+										text: subscriberBody.email_address + ' is already subscribed',
+										type: 'error',
+										confirmButtonText: 'OK'
+									})
+								} else {
+									//new subscriber
+									swal({
+										title: 'Success!',
+										text: subscriberBody.email_address + ' is now subscribed',
+										type: 'success',
+										confirmButtonText: 'OK'
+									})
+								}
 							});
 						};
 		 			}]
