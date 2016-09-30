@@ -26,6 +26,21 @@ main {
 	text-shadow: 2px 2px 4px #000000;
 }
 
+.home {
+	i {
+		display:block;
+		text-align:center;
+	}
+	p{
+		color:black;
+	}
+	.site-actions {
+		.card-panel {
+			min-height:250px;
+		}
+	}
+}
+
 footer.page-footer {
 	margin-top:0px;
 	button{
