@@ -10,5 +10,9 @@
     "angular-route":"*",
     "sweetalert2":"*",
     "angular-ui-calendar":"*"
-  }
+  },
+  "resolutions":{
+   "jquery": "2.2.4",
+   "angular": "1.5.8"
+ }
 }
