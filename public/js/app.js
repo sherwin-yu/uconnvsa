@@ -7,7 +7,8 @@
       'vsa-footer', //footer
       'instafeed', // instagram api
       'mail', //mail api using sendgrid
-      'subscribe' //mailchimp api to subscribe emails
+      'subscribe', //mailchimp api to subscribe emails
+      'ui.calendar' //angular ui calendar directive
   ])
 
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
@@ -91,9 +92,16 @@
   }])
 
   //controller for events page
-  .controller('EventsController', [ function() {
+  .controller('EventsController', [ '$scope', function($scope) {
     var that = this;
 
+    $scope.eventSources = [{
+      googleCalendarApiKey: 'AIzaSyBh9l6I22E4KZgrrjbP5xINkCG9HczMdBg',
+      googleCalendarId: 'pdhgtol8mqobpml89phgmbf6sc@group.calendar.google.com',
+      className: 'gcal-event' // an option!
+    }];
+
+    //initialize parallax
     $(document).ready(function(){
       $('.parallax').parallax();
     });

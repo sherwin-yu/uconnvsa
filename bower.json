@@ -8,6 +8,7 @@
     "angular-materialize":"*",
     "angular":"*",
     "angular-route":"*",
-    "sweetalert2":"*"
+    "sweetalert2":"*",
+    "angular-ui-calendar":"*"
   }
 }
