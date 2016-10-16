@@ -1,27 +1,36 @@
 <footer class="page-footer grey lighten-1">
   <div class="container">
     <div class="row">
-      <div class="col l8 s12">
-        <h5 class="white-text center-align">Subscribe</h5>
-        <p class="grey-text text-lighten-4 center-align">Be the first to know about announcements, meetings, and events by subscribing to our mailing list</p>
+      <div class="col l12 s12">
+        <h5 class="grey-text text-lighten-4 center-align">Subscribe</h5>
+        <p class="grey-text text-lighten-3 center-align">Be the first to know about announcements, meetings, and events by subscribing to our mailing list</p>
           <form name="mailingListForm" ng-submit="mailingListForm.$valid && footerCtrl.subscribe(subscriber.email)" novalidate>
             <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate" autocomplete="off" ng-model="subscriber.email" required>
+              <div class="input-field col l6 offset-l3 col s12">
+                <input id="email" type="email" class="grey-text text-lighten-3 validate" autocomplete="off" ng-model="subscriber.email" required>
                 <label for="email">Enter Your Email</label>
-                <button class="btn waves-effect waves-light blue accent-3 z-depth-0" type="submit" name="action" style="inline-block;">Submit
-                  <i class="material-icons right">send</i>
-                </button>
               </div>
             </div>
           </form>
       </div>
-      <div class="col l4 s12">
-        <h5 class="white-text center-align">Follow Us</h5>
+      <div class="col l12 s12">
+        <h5 class="grey-text text-lighten-4 center-align">Follow Us</h5>
           <ul class="center-align">
-            <li><a class="white-text text-lighten-3" href="https://www.facebook.com/uconnvsa">Facebook</a></li>
-            <li><a class="white-text text-lighten-3" href="https://www.instagram.com/uconnvsa">Instagram</a></li>
-            <li><a class="white-text text-lighten-3" href="https://www.youtube.com/channel/UC81igfyDtim2MdR9X9HfgvA">Youtube</a></li>
+            <li><a href="https://www.facebook.com/uconnvsa">
+              <svg viewBox="0 0 24 24">
+                <path fill="#000000" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+              </svg>
+            </a></li>
+            <li><a href="https://www.instagram.com/uconnvsa">
+              <svg viewBox="0 0 24 24">
+                <path fill="#000000" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+              </svg>
+            </a></li>
+            <li><a href="https://www.youtube.com/channel/UC81igfyDtim2MdR9X9HfgvA">
+              <svg viewBox="0 0 24 24">
+                <path fill="#000000" d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" />
+              </svg>
+            </a></li>
           </ul>
       </div>
     </div>
