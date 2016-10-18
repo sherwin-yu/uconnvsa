@@ -9,7 +9,8 @@
     "angular":"*",
     "angular-route":"*",
     "sweetalert2":"*",
-    "angular-ui-calendar":"*"
+    "angular-ui-calendar":"*",
+    "animate.css":"*"
   },
   "resolutions":{
    "jquery": "2.2.4",
