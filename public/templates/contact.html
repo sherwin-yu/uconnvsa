@@ -1,10 +1,10 @@
 <div class="section grey lighten-4" >
   <div class="row container">
     <div class="col m10 offset-m1 s12 contact">
-      <div class="card-panel z-depth-0">
+      <div class="card-panel z-depth-0 animated fadeIn">
         <h4>Contact</h4>
         <p class="center-align">You can also contact us at <a href="mailto:uconnvsa@gmail.com">uconnvsa@gmail.com</a></p>
-        <form name="contactForm" style="width:100%;" ng-submit="contactForm.$valid && contactCtrl.sendMail(contact)" novalidate>
+        <form name="contactForm" ng-submit="contactForm.$valid && contactCtrl.sendMail(contact)" novalidate>
           <div class="input-field">
               <i class="material-icons prefix">account_circle</i>
               <input type="text" id="name" name="name" autocomplete="off" ng-model="contact.name" required>
@@ -25,9 +25,11 @@
               <textarea class="materialize-textarea" id="message" name="message" autocomplete="off" ng-model="contact.message" required></textarea>
               <label>Message *</label>
           </div>
-          <button class="btn waves-effect waves-light right z-depth-0" type="submit" name="action">Send Message
-            <i class="material-icons right">send</i>
-          </button>
+          <p class="center-align">
+            <button class="btn waves-effect waves-light z-depth-0" type="submit" name="action">Send Message
+              <i class="material-icons right">send</i>
+            </button>
+          </p>
         </form>
        </div>
     </div>

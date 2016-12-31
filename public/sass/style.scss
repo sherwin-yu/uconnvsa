@@ -3,6 +3,7 @@ $dark-red:darken(red, 10%);
 $white: #FAFAFA;
 $light-blue: #C7EEFF;
 $blue: #0077C0;
+$dark-blue:darken(blue, 10%);
 $black: #1D242B;
 $subscribe-color: #f5f5f5;
 
@@ -31,9 +32,9 @@ main {
 
 //button
 .btn {
-	background-color:red;
+	background-color:$blue;
 	&:hover,&:focus,&:active {
-		background-color: $dark-red;
+		background-color: $dark-blue;
 	}
 }
 
@@ -74,7 +75,7 @@ footer.page-footer {
 //calendar
 .fc-toolbar {
 	h2 {
-		font-size:24px;
+		font-size:22px;
 	}
 	.fc-state-default {
 		box-shadow:none;
@@ -96,8 +97,12 @@ footer.page-footer {
 }
 
 .ng-invalid.ng-dirty{
-  border-color:2px $light-red;
+  border-color:$light-red;
 }
 form.ng-submitted .ng-invalid {
   border-color:$light-red;
+}
+
+.fb, .ig, .yt {
+	fill: #ffffff;
 }

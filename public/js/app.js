@@ -72,9 +72,8 @@
   }])
 
   //controller for about page
-  .controller('AboutController', [ function() {
+  .controller('AboutController', [ '$scope', '$route', function($scope, $route) {
     var that = this;
-
     $(document).ready(function(){
       $('.parallax').parallax();
     });
@@ -106,6 +105,7 @@
       $('.parallax').parallax();
     });
 
+
   }])
 
   //controller for media page
@@ -123,6 +123,9 @@
 
     $(document).ready(function(){
       $('.parallax').parallax();
+
+      $('.carousel').carousel();
+
     });
 
   }])
