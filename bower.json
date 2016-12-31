@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "dependencies":{
-    "jquery":"2.2.4",
+    "jquery":"*",
     "materialize":"*",
     "angular-materialize":"*",
     "angular":"*",
@@ -13,7 +13,7 @@
     "animate.css":"*"
   },
   "resolutions":{
-   "jquery": "2.2.4",
-   "angular": "1.5.8"
+   "angular": "~1.4.14",
+   "angular-route":"~1.4.14"
  }
 }
